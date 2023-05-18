@@ -80,6 +80,10 @@ def register():
         else:
             return "注册失败"
 
+@app.route('/test')
+def test():
+    return render_template('123.html')
+
 
 if __name__ == '__main__':
     app.run()
