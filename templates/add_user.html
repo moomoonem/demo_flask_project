@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+    d
+    <h1>添加用户</h1>
+    <form method="post" action="/add_user">
+        <input type="text" name="user" placeholder="user_name">
+        <input type="text" name="pwd" placeholder="password">
+        <input type="text" name="mobile" placeholder="phone_number">
+        <input type="submit" value="Submit">
+
+    </form>
+    <h1>用户列表</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>密码</th>
+                <th>手机</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in datalist %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.password }}</td>
+            <td>{{ i.mobile }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
